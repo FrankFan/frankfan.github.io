@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> jQuery用法小结 · Frank Fan's Blog</title><meta name="description" content="jQuery用法小结 - Frank Fan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://fy98.com/atom.xml" title="Frank Fan's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">jQuery用法小结</h1><div class="post-info">2014年11月10日</div><div class="post-content"><h2 id="jQuery-DOM-操作"><a href="#jQuery-DOM-操作" class="headerlink" title="jQuery DOM 操作"></a>jQuery DOM 操作</h2><p>1.使用<code>html()</code>方法读取或者设置元素的innerHTML</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读取</span></span><br><span class="line">$(<span class="string">"a:first"</span>).html();</span><br><span class="line"><span class="comment">//设值</span></span><br><span class="line">$(<span class="string">"a:first"</span>).html(<span class="string">"&lt;h2&gt;hello&lt;/h2&gt;"</span>);</span><br></pre></td></tr></table></figure>
+<p>2.使用<code>text()</code>方法读取或者设置元素的innerText</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读取</span></span><br><span class="line">$(<span class="string">"a:first"</span>).text();</span><br><span class="line"><span class="comment">//设值</span></span><br><span class="line">$(<span class="string">"a:first"</span>).text(<span class="string">"hello"</span>);</span><br></pre></td></tr></table></figure>
+<p>3.使用<code>attr()</code>方法读取或者设置元素的属性<br>对于jQuery没有封装的属性用attr操作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读取</span></span><br><span class="line">$(<span class="string">"a:first"</span>).attr(<span class="string">"href"</span>);</span><br><span class="line"><span class="comment">//设值</span></span><br><span class="line">$(<span class="string">"a:first"</span>).text(<span class="string">"href"</span>, <span class="string">"http://www.fy98.com/"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>4.使用 <code>removeAttr()</code> 方法删除元素属性<br><code>$(&quot;a:first&quot;).removeAttr(&quot;href&quot;);</code></p>
+<p>5.用<code>addClass()</code> 给元素添加样式名， 用<code>removeClass()</code>移除样式名<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态添加样式名 class</span></span><br><span class="line">$(<span class="string">"a"</span>).addClass(<span class="string">"current"</span>);</span><br><span class="line"><span class="comment">// 移除样式名</span></span><br><span class="line">$(<span class="string">"a"</span>).removeClass(<span class="string">"current"</span>);</span><br><span class="line"><span class="comment">//显示元素,相当于添加style='display:block;'</span></span><br><span class="line">$(<span class="keyword">this</span>).show();</span><br><span class="line"><span class="comment">//隐藏元素,相当于添加style='display:none;'</span></span><br><span class="line">$(<span class="keyword">this</span>).hide(<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>##jQuery表单选择器</p>
+<ul>
+<li>$(“:input”)选取所有 <code>&lt;input&gt;</code>, <code>&lt;textare&gt;</code>, <code>&lt;select&gt;</code>和<code>&lt;button&gt;</code>元素</li>
+<li>和$(“input”)不一样，$(“input”)只选取<code>&lt;input&gt;</code></li>
+<li>多条件选择器<br><code>$(&quot;p, div, span.menuitem&quot;)</code> 同时选择p标签、div标签和拥有menuitem样式的span标签，注意选择器表达式中的空格不能多不能少。</li>
+<li>层次选择器</li>
+</ul>
+<ol>
+<li><code>$(&quot;div li&quot;)</code> 获取div下的所有li元素，包括后代、后台的后台等</li>
+<li><code>$(&quot;div &gt; li&quot;)</code> 获取div下的直接li子元素</li>
+<li><code>$(&quot;.menu + div&quot;)</code> 获取样式名为menu之后的第一个div元素（不常用）</li>
+<li><code>$(&quot;.menu ~ div&quot;)</code> 获取样式名为menu之后的所有的div元素（不常用）</li>
+</ol>
+<h2 id="jQuery过滤器"><a href="#jQuery过滤器" class="headerlink" title="jQuery过滤器"></a>jQuery过滤器</h2><ol>
+<li><code>:first</code> 选取第一个元素。$(“p:first”)选取第一个p标签</li>
+<li><code>:last</code> 选取最后一个元素。$(“div:last”)选取最后一个div标签</li>
+<li><code>not(选择器)</code> 选取不满足<code>选择器</code>条件的元素。$(“input: not(.myClass)”)选取样式名不是myClass的input标签</li>
+<li><code>:even</code>、<code>:odd</code> 选取索引是奇数、偶数的元素。$(“input:even”)选取索引是奇数的input标签。</li>
+<li><code>:eq(索引序号)</code>、<code>:gt(索引序号)</code>、<code>:lt(索引序号)</code> 选取索引等于、大于或小于索引序号的元素。比如$(“li:lt(1)”)选取索引小于1的li标签</li>
+<li><code>$(&quot;:header&quot;)</code> 选取所有h1至h6的元素</li>
+<li><code>$(&quot;div:animated&quot;)</code> 选取所有正在执行动画的div元素</li>
+<li>属性过滤选择器<ul>
+<li><code>$(&quot;div[id]&quot;)</code> 选取所有有id属性的div</li>
+<li><code>$(&quot;div[title=test]&quot;)</code> 选取title属性为test的div标签，注意，jQuery中没有对<code>getElementsByName</code> 进行封装，用<code>$(&quot;input[name=abc]&quot;)</code> 这样替代</li>
+<li><code>$(&quot;div[title!=test]&quot;)</code> 选取title属性不为test的div标签 </li>
+</ul>
+</li>
+<li>表单对象选择器</li>
+</ol>
+<ul>
+<li><code>$(&quot;#form1 :enabled&quot;)</code> 选取id为form1的表单内所有启用的元素</li>
+<li><code>$(&quot;#form1 :disabled&quot;)</code> 选取id为form1的表单内所有被禁用的元素</li>
+<li><code>$(&quot;input:checked&quot;)</code> 选取所有选中的元素，如radio、checkbox等</li>
+<li><code>$(&quot;select:seleced&quot;)</code> 选取下拉列表中所有被选中的元素</li>
+</ul>
+<p>##jQuery中的回调</p>
+<ol>
+<li>没有参数的回调</li>
+</ol>
+<ul>
+<li><code>$.get(&quot;page.html&quot;, myCallBack);</code> 当get请求完成后调用myCallBack方法</li>
+</ul>
+<ol start="2">
+<li>有参数的回调</li>
+</ol>
+<ul>
+<li><code>$.get(&quot;page.html&quot;, function(){myCallBack(param1, param2)});</code> 带参数的方法要用匿名函数包起来。</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2014/11/15/js-knowledge/" class="prev">上一篇</a><a href="/2014/11/05/jquery-with-select-option/" class="next">下一篇</a></div><div class="copyright"><p>© 2014 - 2018 <a href="http://fy98.com">Frank Fan</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

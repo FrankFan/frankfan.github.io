@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端的题 · Frank Fan's Blog</title><meta name="description" content="前端的题 - Frank Fan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://fy98.com/atom.xml" title="Frank Fan's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">前端的题</h1><div class="post-info">2015年1月9日</div><div class="post-content"><h2 id="HTML-CSS-相关"><a href="#HTML-CSS-相关" class="headerlink" title="HTML/CSS 相关"></a>HTML/CSS 相关</h2><ol>
+<li><p>一道页面布局题<br> 有个web页面，分为左右结构，左边是一张宽度固定的图片；右边是一个宽度自适应的div，div中有很多其他元素从上到下依次排列。要写出html和css</p>
+<blockquote>
+<p>方法有很多种，可以用float布局，也可以用position布局，如果能回答出来flexbox就更棒了，可以再延伸到浏览器兼容性等问题。</p>
+</blockquote>
+<p> float例子：xxxxxx<br> position例子： xxxxx<br> flexbox例子： xxxxx</p>
+</li>
+</ol>
+<ol start="2">
+<li>如何看出是html4还是html5 ?<blockquote>
+<p>通过html第一行的<code>doctype</code>来区分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p><code>doctype</code>是什么？有什么用？</p>
+<h2 id="Javascript-相关"><a href="#Javascript-相关" class="headerlink" title="Javascript 相关"></a>Javascript 相关</h2><ol>
+<li>输出终端运行结果 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i, j, obj=[];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line">	<span class="keyword">var</span> tempFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(i);</span><br><span class="line">	&#125;</span><br><span class="line">	obj.push(tempFunc);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++)&#123;</span><br><span class="line">	obj[j]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>正确结果是输出10个10，算是考察闭包吧。<br>    <img src="http://images.cnitblog.com/blog/282019/201501/100050486871889" alt=""></p>
+<ol start="2">
+<li>js数据类型<br>说出<code>null</code>、<code>undefined</code>和<code>NaN</code>的区别</li>
+</ol>
+<blockquote>
+<p><code>null</code> 是对象类型，因为typeof(null)返回<code>object</code><br><code>undefined</code>是值类型， typeof(undefined)返回 <code>undefined</code><br><code>NaN</code>是window对象的一个全局属性，typeof(NaN)返回<code>number</code>，所以它是简单类型。</p>
+</blockquote>
+<ol start="3">
+<li>输出终端运行结果 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'3'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>输出 1,3,2 而不是1,2,3 因为setTimeout会不论第二个参数是不是0都会放到程序最后执行</p>
+</blockquote>
+<p><img src="http://images.cnitblog.com/blog/282019/201501/100051337659883" alt=""></p>
+<ol start="4">
+<li><p>说说对<code>promise</code>的理解<br> 这个理解的就是很深刻，项目中没有用到过，但是部门分享@lp有提到过。稍后深入研究一下。<br>参考资料：<a href="http://www.infoq.com/cn/news/2011/09/js-promise/" target="_blank" rel="noopener">http://www.infoq.com/cn/news/2011/09/js-promise/</a></p>
+</li>
+<li><p>requirejs 如何加载非模块化js类库 ?<br>首先需要会手动配置require js，(<code>paths</code>)然后遇到非模块化的问题使用<code>shim方式</code>配置。</p>
+</li>
+</ol>
+<h2 id="前端工作流"><a href="#前端工作流" class="headerlink" title="前端工作流"></a>前端工作流</h2><p>grunt + bower + yeoman + CI(持续集成) 打包等自动化流程</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2015/01/11/git-integrated-with-beyond-compare-in-windows/" class="prev">上一篇</a><a href="/2015/01/05/install-sass-compass-in-windows/" class="next">下一篇</a></div><div class="copyright"><p>© 2014 - 2018 <a href="http://fy98.com">Frank Fan</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

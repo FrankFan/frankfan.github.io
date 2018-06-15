@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 通过nodejs、Express框架搭建Web · Frank Fan's Blog</title><meta name="description" content="通过nodejs、Express框架搭建Web - Frank Fan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://fy98.com/atom.xml" title="Frank Fan's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">通过nodejs、Express框架搭建Web</h1><div class="post-info">2014年11月25日</div><div class="post-content"><p>通过nodejs、Express框架搭建Web</p>
+<p>Express 是一个简洁、灵活的 node.js Web 应用开发框架, 它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。<br>官网 <a href="http://expressjs.com/" target="_blank" rel="noopener">http://expressjs.com/</a></p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fsbyoewybbj308a048t8k.jpg" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fsbyohvh59j30ax08fwf3.jpg" alt=""></p>
+<ol start="0">
+<li><p>安装node.js<br>这个就略过。</p>
+</li>
+<li><p>安装 express<br>$ npm install express –save</p>
+</li>
+<li><p>安装 express 生成器<br>$ npm install express-generator -g</p>
+</li>
+<li><p>检测是否安装成功<br>$ express -V</p>
+</li>
+<li><p>生成一个app<br>$ express myapp</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create : myapp</span><br><span class="line">create : myapp/package.json</span><br><span class="line">create : myapp/app.js</span><br><span class="line">create : myapp/public</span><br><span class="line">create : myapp/public/images</span><br><span class="line">create : myapp/public/stylesheets</span><br><span class="line">create : myapp/public/stylesheets/style.css</span><br><span class="line">create : myapp/routes</span><br><span class="line">create : myapp/routes/index.js</span><br><span class="line">create : myapp/routes/users.js</span><br><span class="line">create : myapp/views</span><br><span class="line">create : myapp/views/index.jade</span><br><span class="line">create : myapp/views/layout.jade</span><br><span class="line">create : myapp/views/error.jade</span><br><span class="line">create : myapp/public/javascripts</span><br><span class="line">create : myapp/bin</span><br><span class="line">create : myapp/bin/www</span><br><span class="line"></span><br><span class="line">install dependencies:</span><br><span class="line">  $ <span class="built_in">cd</span> myapp &amp;&amp; npm install</span><br><span class="line"></span><br><span class="line">run the app:</span><br><span class="line">  $ DEBUG=myapp ./bin/www</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>安装npm依赖<br>$ cd myapp &amp;&amp; npm install</p>
+</li>
+<li><p>启动服务， 注意路径别写错<br>$ set DEBUG=myapp &amp; node myapp/bin/www</p>
+</li>
+</ol>
+<p>正确的话就可以打开浏览器 <a href="http://localhost:3000/" target="_blank" rel="noopener">http://localhost:3000/</a></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fsbyomejx6j30du094dg2.jpg" alt=""></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2014/11/30/css-layout/" class="prev">上一篇</a><a href="/2014/11/20/css-draw-triangel/" class="next">下一篇</a></div><div class="copyright"><p>© 2014 - 2018 <a href="http://fy98.com">Frank Fan</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

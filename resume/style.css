@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #2d2d2d;
+  font-family: 微软雅黑, 宋体;
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
+.clearfix {
+  clear: both;
+}
+.hide {
+  display: none;
+}
+
+.container {
+  width: 210mm;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+.content section {
+  margin-bottom: 20px;
+}
+.content section h2 {
+  border-bottom: 5px solid #3b89ca;
+  margin: 0;
+  padding: 0;
+}
+.content section h2 span {
+  background-color: #3b89ca;
+  color: #f2f7fd;
+  margin: 0;
+  padding: 7px 15px 3px 15px;
+  font-size: 0.8em;
+}
+
+section {
+  color: #555555;
+}
+section ul.record-list {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+section ul.record-list li {
+  border-bottom: 2px solid #ededed;
+  margin-top: 16px;
+  padding-bottom: 10px;
+}
+section ul.record-list li.more {
+  text-align: center;
+}
+section ul.record-list li.more a {
+  color: #888888;
+  font-size: 0.8;
+}
+section ul.record-list li .duration {
+  float: right;
+  font-weight: bold;
+  color: #808080;
+  width: 180px;
+}
+section ul.record-list li p {
+  color: #777777;
+  margin: 5px 0;
+}
+section ul.record-list li dl {
+  color: #777777;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+section ul.record-list li dl dt {
+  display: inline-block;
+  width: 90px;
+  font-weight: bold;
+  vertical-align: top;
+}
+section ul.record-list li dl dd {
+  display: inline-block;
+  width: 660px;
+  margin-left: 0;
+}
+
+#header {
+  padding: 10px;
+}
+#header h1 {
+  margin: 0;
+  color: #3c89cb;
+  font-size: 1.8em;
+}
+#header h1 strong {
+  color: #6e6d71;
+  font-size: 0.8em;
+}
+
+#profile p {
+  padding-left: 20px;
+  padding-right: 240px;
+}
+
+#contact {
+  float: right;
+  width: 80mm;
+  background-color: #e6e1dd;
+}
+#contact h2 {
+  border-bottom-width: 0;
+}
+#contact h2 span {
+  display: block;
+  background-color: #484242;
+}
+#contact ul {
+  padding-left: 20px;
+}
+#contact ul li {
+  margin-bottom: 5px;
+}
+#contact ul li.icon {
+  padding-left: 24px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#contact ul li.icon-home {
+  background-image: url(home.png);
+}
+#contact ul li.icon-phone {
+  background-image: url(mobile.png);
+}
+#contact ul li.icon-email {
+  background-image: url(mail.png);
+}
+#contact ul li.icon-blog {
+  background-image: url(earth.png);
+}
+#contact ul li.icon-github {
+  background-image: url(github.png);
+}
+#contact ul li.icon-weibo {
+  background-image: url(weibo.png);
+}
+
+#skills {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+#skills h3 {
+  padding: 0 7px 0;
+  margin: 27px 80px 17px 80px;
+  line-height: 1px;
+  text-align: center;
+  border-left: 250px solid #ccc;
+  border-right: 250px solid #ccc;
+  font-size: 1em;
+}
+#skills small {
+  display: block;
+  text-align: center;
+}
+#skills ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 7px;
+}
+#skills ul li {
+  width: 370px;
+  height: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+#skills ul li:nth-child(odd) {
+  float: left;
+}
+#skills ul li:nth-child(even) {
+  float: right;
+}
+#skills ul li label {
+  display: block;
+  width: 100px;
+}
+#skills ul li:nth-child(odd) label {
+  float: left;
+  text-align: left;
+}
+#skills ul li:nth-child(even) label {
+  float: right;
+  text-align: right;
+}
+#skills ul li .process {
+  width: 270px;
+  background-color: #e8ecf0;
+}
+#skills ul li .process .bar {
+  background: #3c8bcb;
+}
+#skills ul li:nth-child(odd) .process {
+  float: right;
+  text-align: right;
+}
+#skills ul li:nth-child(even) .process {
+  float: left;
+  text-align: left;
+}
+#skills ul li:nth-child(odd) .process .bar {
+  float: right;
+  text-align: right;
+}
+#skills ul li:nth-child(even) .process .bar {
+  float: left;
+  text-align: left;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+}
+
+::selection {
+  background: #8ed057;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #8ed057;
+  color: #ffffff;
+}
+
+/* alert 框 */
+box.alert,
+box.alert h4 {
+  color: #c09853;
+}
+
+box.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.ie-alert {
+  position: fixed;
+  top: 50px;
+  width: 630px;
+  z-index: 9999;
+}
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 20px;
+}
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+box > p,
+h4 {
+  font: 500 15px/1.8 "Optima", "Verdana", "Microsoft Yahei", sans-serif;
+  cursor: default;
+}
+
+box > p {
+  margin: 0 0 10px;
+}
+
+box.alert-block p + p {
+  margin-top: 5px;
+}
