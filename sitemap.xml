@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fy98.com/2014/11/02/git-flow-introduce/</loc>
+    
+    <lastmod>2018-07-12T08:27:35.718Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fy98.com/2018/07/10/about-develop-and-publish-npm/</loc>
     
     <lastmod>2018-07-10T08:27:47.431Z</lastmod>
@@ -156,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/11/02/introduce-git-flow/</loc>
-    
-    <lastmod>2018-06-15T08:58:04.380Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fy98.com/2015/11/10/http-server-in-mac-os/</loc>
     
     <lastmod>2018-06-15T08:56:53.145Z</lastmod>
@@ -201,13 +201,6 @@
     <loc>http://fy98.com/2014/11/25/build-web-with-node-express-js/</loc>
     
     <lastmod>2018-06-15T08:51:13.338Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fy98.com/2014/06/30/2014-06-30-useragent/</loc>
-    
-    <lastmod>2018-06-15T08:50:21.679Z</lastmod>
     
   </url>
   
@@ -408,14 +401,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/11/05/jquery-with-select-option/</loc>
+    <loc>http://fy98.com/2014/11/10/jquery-usage/</loc>
     
     <lastmod>2018-06-14T10:09:17.722Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/11/10/jquery-usage/</loc>
+    <loc>http://fy98.com/2014/11/05/jquery-with-select-option/</loc>
     
     <lastmod>2018-06-14T10:09:17.722Z</lastmod>
     
@@ -429,14 +422,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
+    <loc>http://fy98.com/2015/01/05/install-sass-compass-in-windows/</loc>
     
     <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/01/05/install-sass-compass-in-windows/</loc>
+    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
     
     <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     
