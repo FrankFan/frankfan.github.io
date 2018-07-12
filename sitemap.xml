@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fy98.com/2018/07/01/file-permission-in-mac/</loc>
+    
+    <lastmod>2018-07-12T12:37:27.304Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fy98.com/2014/11/02/git-flow-introduce/</loc>
     
-    <lastmod>2018-07-12T08:27:35.718Z</lastmod>
+    <lastmod>2018-07-12T08:30:45.637Z</lastmod>
     
   </url>
   
@@ -282,14 +289,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/10/05/event-in-javascript/</loc>
+    <loc>http://fy98.com/2015/06/30/edit-environment-variable-in-mac/</loc>
     
     <lastmod>2018-06-15T02:15:08.292Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/06/30/edit-environment-variable-in-mac/</loc>
+    <loc>http://fy98.com/2014/10/05/event-in-javascript/</loc>
     
     <lastmod>2018-06-15T02:15:08.292Z</lastmod>
     
@@ -345,14 +352,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/10/13/splice-in-javascript/</loc>
+    <loc>http://fy98.com/2015/01/15/scope-and-closures-in-javascript/</loc>
     
     <lastmod>2018-06-14T10:09:17.727Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/01/15/scope-and-closures-in-javascript/</loc>
+    <loc>http://fy98.com/2014/10/13/splice-in-javascript/</loc>
     
     <lastmod>2018-06-14T10:09:17.727Z</lastmod>
     
@@ -387,14 +394,7 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/03/27/jquery-bind-delegate-live-on/</loc>
-    
-    <lastmod>2018-06-14T10:09:17.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fy98.com/2014/10/25/javascript-jquery-string-functions/</loc>
+    <loc>http://fy98.com/2014/11/05/jquery-with-select-option/</loc>
     
     <lastmod>2018-06-14T10:09:17.722Z</lastmod>
     
@@ -408,9 +408,23 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/11/05/jquery-with-select-option/</loc>
+    <loc>http://fy98.com/2014/10/25/javascript-jquery-string-functions/</loc>
     
     <lastmod>2018-06-14T10:09:17.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fy98.com/2015/03/27/jquery-bind-delegate-live-on/</loc>
+    
+    <lastmod>2018-06-14T10:09:17.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
+    
+    <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     
   </url>
   
@@ -423,13 +437,6 @@
   
   <url>
     <loc>http://fy98.com/2015/01/05/install-sass-compass-in-windows/</loc>
-    
-    <lastmod>2018-06-14T10:09:17.721Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
     
     <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     

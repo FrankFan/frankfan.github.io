@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Mac下文件权限查看与设置 · Frank Fan's Blog</title><meta name="description" content="Mac下文件权限查看与设置 - Frank Fan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://fy98.com/atom.xml" title="Frank Fan's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Mac下文件权限查看与设置</h1><div class="post-info">2018年7月1日</div><div class="post-content"><p>介绍Unix、Linux下文件和权限。</p>
+<a id="more"></a>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我们先创建一个测试目录</span></span><br><span class="line">$ mkdir <span class="built_in">test</span> &amp;&amp; <span class="built_in">cd</span> <span class="built_in">test</span></span><br><span class="line"><span class="comment"># 创建一个main.txt文件并写入一些内容</span></span><br><span class="line">$ <span class="built_in">echo</span> hello world &gt;&gt; text.txt</span><br><span class="line"><span class="comment"># 再创建一个空目录</span></span><br><span class="line">$ mkdir js</span><br><span class="line"><span class="comment"># 查看信息</span></span><br><span class="line">$ ls -l</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x  2 frank  staff  64  7 12 20:03 js <span class="comment"># 这行就是js目录的信息</span></span><br><span class="line">-rw-r--r--  1 frank  staff  13  7 12 19:52 main.txt <span class="comment"># 这行是main.txt的信息</span></span><br></pre></td></tr></table></figure>
+<p>如上所示，文件和目录都具有如下信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 权限信息通用格式：</span></span><br><span class="line">-rwxr-xr-x　number　user　group　filesize　updatetime　filename</span><br></pre></td></tr></table></figure></p>
+<p>通用格式共分成7部分，分别是：</p>
+<ol>
+<li>文件属性，表示文件的类型是读/写/可执行等权限，共10个字符；<ul>
+<li>第一个字符表示类型，后面9个字符分3组，表示该文件相对于当前用户(user)、当前用户所在的组(group)和其他用户(other)的读/写/可执行权限。</li>
+<li>rwx：代表权限，-代表无权限，r代表read具有可读权限；w代表write具有可写权限；x代表execute具有可执行权限</li>
+<li>拿上面的<code>main.txt</code>举例，第一个字符是-，表示是文件类型；而<code>js</code>目录第一个字符是<code>d</code>，表示<code>directory</code>目录</li>
+<li>接下来的3个字符是<code>rw-，</code>表示该文件对于当前用户的权限是可读可写，但是不能执行</li>
+<li>再接下来的3个字符是<code>r--</code>，表示该文件对于当前用户所在的组的成员来说，只有只读权限，写和可执行都是没有权限的</li>
+<li>最后的3个字符也是<code>r--</code>，表示该文件对于其他用户来说也是只能读，不能写和执行</li>
+</ul>
+</li>
+<li>number,表示文件inode数量，inode表示存储文件原信息的区域；</li>
+<li>user, 表示当前用户名</li>
+<li>group， 表示当前用户所在的用户组的名字</li>
+<li>filesize，表示文件的大小，单位是byte</li>
+<li>updatetime，表示文件的最后修改时间</li>
+<li>filename，表示文件名</li>
+</ol>
+<h2 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h2><p><code>main.txt</code>的权限是<code>-rw-r--r--  1 frank  staff  13  7 12 19:52 main.txt</code>，对其他用户的权限是<code>r--</code>，即只能读不能写，如果有个需求想让其他用户可写怎么办？这时候就需要修改<code>main.txt</code>的权限了，让其他用户也能进行写操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改权限的命令格式</span></span><br><span class="line">$ [sudo] chmod [&lt;权限范围&gt;&lt;权限操作&gt;&lt;具体权限&gt;] [文件或目录]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>权限范围<ul>
+<li>u: user，表示文件或目录的拥有者</li>
+<li>g: group，表示文件或目录所属的组</li>
+<li>o: other，除了文件或目录拥有者或者所属组之外的，其他用户都属于这个范围</li>
+<li>a: all，即全部用户，包含文件或目录的拥有者、所属群组和其他用户</li>
+</ul>
+</li>
+<li>权限操作<ul>
+<li><code>+</code>表示增加权限</li>
+<li><code>-</code>表示取消权限</li>
+<li><code>=</code>表示唯一设定权限</li>
+</ul>
+</li>
+<li>具体权限<ul>
+<li><code>r</code>表示可读取</li>
+<li><code>w</code>表示可写入</li>
+<li><code>x</code>表示可执行</li>
+</ul>
+</li>
+</ol>
+<p>解释了这么多，现在我们通过命令操作，让<code>其他用户</code>对<code>main.txt</code>也有写的权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 让其他用户具有写权限</span></span><br><span class="line">$ chmod o+w main.txt</span><br><span class="line"><span class="comment"># 确认</span></span><br><span class="line">$ ls -l main.txt</span><br><span class="line">-rw-r--rw-  1 frank  staff  13  7 12 19:52 main.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让所有用户具有可执行权限，但是不可以修改且不可读</span></span><br><span class="line">$ chmod a+x-r-w main.txt</span><br><span class="line"><span class="comment"># 再次确认</span></span><br><span class="line">---x--x--x  1 frank  staff  13  7 12 19:52 main.txt</span><br></pre></td></tr></table></figure>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/07/10/about-develop-and-publish-npm/" class="prev">PREV</a><a href="/2018/06/15/vue-mint-ui-pullup-pulldown/" class="next">NEXT</a></div><div class="copyright"><p>© 2014 - 2018 <a href="http://fy98.com">Frank Fan</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
