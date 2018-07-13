@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fy98.com/2015/09/23/es5-array-new-function/</loc>
+    
+    <lastmod>2018-07-13T03:02:45.092Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fy98.com/2018/07/01/file-permission-in-mac/</loc>
     
     <lastmod>2018-07-12T12:37:27.304Z</lastmod>
@@ -331,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/google3b057d48693cd7f2.html</loc>
+    <loc>http://fy98.com/2015/01/22/this-in-javascript/</loc>
     
     <lastmod>2018-06-14T10:09:17.729Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/01/22/this-in-javascript/</loc>
+    <loc>http://fy98.com/google3b057d48693cd7f2.html</loc>
     
     <lastmod>2018-06-14T10:09:17.729Z</lastmod>
     
@@ -373,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/06/09/localstorage-in-safiri-private-mode-exception/</loc>
+    <loc>http://fy98.com/2014/10/13/npm-and-bower-brief-introduction/</loc>
     
     <lastmod>2018-06-14T10:09:17.725Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/10/13/npm-and-bower-brief-introduction/</loc>
+    <loc>http://fy98.com/2015/06/09/localstorage-in-safiri-private-mode-exception/</loc>
     
     <lastmod>2018-06-14T10:09:17.725Z</lastmod>
     
@@ -390,6 +397,13 @@
     <loc>http://fy98.com/2014/10/06/learn-coffeeScript/</loc>
     
     <lastmod>2018-06-14T10:09:17.723Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fy98.com/2014/10/25/javascript-jquery-string-functions/</loc>
+    
+    <lastmod>2018-06-14T10:09:17.722Z</lastmod>
     
   </url>
   
@@ -408,23 +422,9 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2014/10/25/javascript-jquery-string-functions/</loc>
-    
-    <lastmod>2018-06-14T10:09:17.722Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fy98.com/2015/03/27/jquery-bind-delegate-live-on/</loc>
     
     <lastmod>2018-06-14T10:09:17.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
-    
-    <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     
   </url>
   
@@ -443,16 +443,16 @@
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/01/11/git-integrated-with-beyond-compare-in-windows/</loc>
+    <loc>http://fy98.com/2015/05/27/install-ruby-and-compass-in-mac-os-x/</loc>
     
-    <lastmod>2018-06-14T10:09:17.720Z</lastmod>
+    <lastmod>2018-06-14T10:09:17.721Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fy98.com/2015/09/23/es5-array-new-function/</loc>
+    <loc>http://fy98.com/2015/01/11/git-integrated-with-beyond-compare-in-windows/</loc>
     
-    <lastmod>2018-06-14T10:09:17.718Z</lastmod>
+    <lastmod>2018-06-14T10:09:17.720Z</lastmod>
     
   </url>
   
